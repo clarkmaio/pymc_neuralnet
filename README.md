@@ -1,2 +1,41 @@
 # Pymc Neuralnet
-Repository to build Bayesian neuralnets with Keras-like syntax
+Simple package to build Bayesian neuralnets with Keras-like syntax.
+
+Use layers and `add` method to build a neural net that refer to Likelihood parameters.
+When adding a layer the first parameter of the `.add` method of the `Sequential` model is the name of the parameter of the Likelihood that will be modeled by the nerual net.
+
+<br>
+You can assign a likelihood function using the `.add_likelihood` and `Likelihood` class or use Sequential model with pre-assigned likelihood:
+
+| Sequential model | Parameters list |
+|----------|---------|
+|`NormalSequential`|`'mu'`, `'sigma'`|
+|`BernulliSequential`|`'p'`|
+
+
+```
+# Example
+model = NormalSequential()
+model.add('mu', Input(input_size=X.shape[1]))
+mdl.add('mu', Input(input_size=X.shape[1]))
+mdl.add('mu', Dense(units=10, use_bias=True, activation='tanh'))
+mdl.add('mu', Dense(units=1, use_bias=True, activation='linear'))
+
+
+mdl.add('sigma', Input(input_size=X.shape[1]))
+mdl.add('sigma', Dense(units=3, use_bias=True, activation='tanh'))
+mdl.add('sigma', Dense(units=1, use_bias=True, activation='sigmoid'))
+```
+
+See `doc/example.ipynb` for an example.
+
+<br><br>
+
+:warning: **Todo:**
+* :x: Better documentation and more examples!!!!!
+* :white_check_mark: Sequential model
+* :white_check_mark: NormalSequential model
+* :x: BernulliSequential model
+* :x: Non Sequential model
+* :x: Integrate optuna to perform gridsearch
+
