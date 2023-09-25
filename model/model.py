@@ -208,7 +208,6 @@ if __name__ == '__main__':
     mdl.fit(X_train, y_train, use_advi=True, advi_kws={'n': 100000}, sample_kws={'draws': 5000})
 
     # Prediction
-    y_pred_train = mdl.predict(X=X_train)
     y_pred = mdl.predict(X=X_test)
     y_pred_quantile = mdl.predict(X=X_test, quantile=[.025, .975])
 
