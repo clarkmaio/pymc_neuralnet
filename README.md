@@ -1,7 +1,7 @@
 # Pymc Neuralnet
 Simple package to build Bayesian neuralnets with Keras-like syntax.
 
-Use layers and `add` method to build a neural net that refer to Likelihood parameters.
+Use layers and `add` method to build a neural to model Likelihood parameters.
 When adding a layer the first parameter of the `.add` method of the `Sequential` model is the name of the parameter of the Likelihood that will be modeled by the nerual net.
 
 <br>
@@ -14,7 +14,10 @@ You can assign a likelihood function using the `.add_likelihood` and `Likelihood
 
 
 ```
-# Example
+# Example: NormalSequential has normal Likelihood.
+# You can model 'mu', 'sigma' parameters.
+# If not specified a defualt prior distribution will be used
+
 model = NormalSequential()
 model.add('mu', Input(input_size=X.shape[1]))
 mdl.add('mu', Input(input_size=X.shape[1]))
