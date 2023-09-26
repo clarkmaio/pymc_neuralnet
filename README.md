@@ -23,14 +23,14 @@ model.add('mu', Input(input_size=X.shape[1]))
 mdl.add('mu', Input(input_size=X.shape[1]))
 mdl.add('mu', Dense(units=10, use_bias=True, activation='tanh'))
 mdl.add('mu', Dense(units=1, use_bias=True, activation='linear'))
-
-
-mdl.add('sigma', Input(input_size=X.shape[1]))
-mdl.add('sigma', Dense(units=3, use_bias=True, activation='tanh'))
-mdl.add('sigma', Dense(units=1, use_bias=True, activation='sigmoid'))
 ```
 
 See `doc/example.ipynb` for an example.
+
+![spline](https://github.com/clarkmaio/pymc_neuralnet/blob/master/doc/img/spline.png)
+
+![trace](https://github.com/clarkmaio/pymc_neuralnet/blob/master/doc/img/trace.png)
+
 
 <br><br>
 
