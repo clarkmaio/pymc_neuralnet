@@ -25,7 +25,9 @@ mdl.add('mu', Dense(units=10, use_bias=True, activation='tanh'))
 mdl.add('mu', Dense(units=1, use_bias=True, activation='linear'))
 ```
 
-See `doc/example.ipynb` for an example.
+<br>
+
+**See ![`doc/example.ipynb`](https://github.com/clarkmaio/pymc_neuralnet/blob/master/doc/example.ipynb) for a complete example.**
 
 ![spline](https://github.com/clarkmaio/pymc_neuralnet/blob/master/doc/img/spline.png)
 
@@ -34,7 +36,7 @@ See `doc/example.ipynb` for an example.
 
 <br><br>
 
-:warning: **Todo:**
+:warning: **Todo list:**
 * :x: Better documentation and more examples!!!!!
 * :white_check_mark: Sequential model
 * :white_check_mark: NormalSequential model
